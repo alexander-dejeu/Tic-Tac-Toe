@@ -12,6 +12,12 @@
 		FAE776D61DBA91730065A85B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE776D41DBA91730065A85B /* Main.storyboard */; };
 		FAE776D81DBA91730065A85B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAE776D71DBA91730065A85B /* Assets.xcassets */; };
 		FAE776DB1DBA91730065A85B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE776D91DBA91730065A85B /* LaunchScreen.storyboard */; };
+		FAE776E61DBA93570065A85B /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE776E51DBA93570065A85B /* Board.swift */; };
+		FAE776E81DBA93620065A85B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE776E71DBA93620065A85B /* Player.swift */; };
+		FAE776EA1DBA937B0065A85B /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE776E91DBA937B0065A85B /* Status.swift */; };
+		FAE776EC1DBA939D0065A85B /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE776EB1DBA939D0065A85B /* BoardView.swift */; };
+		FAE776EE1DBA93AE0065A85B /* FieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE776ED1DBA93AE0065A85B /* FieldView.swift */; };
+		FAE776F01DBA9EBA0065A85B /* TicTacToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE776EF1DBA9EBA0065A85B /* TicTacToeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		FAE776D71DBA91730065A85B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAE776DA1DBA91730065A85B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAE776DC1DBA91730065A85B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAE776E51DBA93570065A85B /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		FAE776E71DBA93620065A85B /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		FAE776E91DBA937B0065A85B /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		FAE776EB1DBA939D0065A85B /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		FAE776ED1DBA93AE0065A85B /* FieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldView.swift; sourceTree = "<group>"; };
+		FAE776EF1DBA9EBA0065A85B /* TicTacToeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicTacToeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,9 @@
 		FAE776CF1DBA91730065A85B /* Tic-Tac-Toe */ = {
 			isa = PBXGroup;
 			children = (
+				FAE776E21DBA934A0065A85B /* Models */,
+				FAE776E31DBA934A0065A85B /* ViewControllers */,
+				FAE776E41DBA934A0065A85B /* Views */,
 				FAE776D01DBA91730065A85B /* AppDelegate.swift */,
 				FAE776D21DBA91730065A85B /* ViewController.swift */,
 				FAE776D41DBA91730065A85B /* Main.storyboard */,
@@ -62,6 +77,33 @@
 				FAE776DC1DBA91730065A85B /* Info.plist */,
 			);
 			path = "Tic-Tac-Toe";
+			sourceTree = "<group>";
+		};
+		FAE776E21DBA934A0065A85B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAE776E51DBA93570065A85B /* Board.swift */,
+				FAE776E71DBA93620065A85B /* Player.swift */,
+				FAE776E91DBA937B0065A85B /* Status.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FAE776E31DBA934A0065A85B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FAE776EF1DBA9EBA0065A85B /* TicTacToeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FAE776E41DBA934A0065A85B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAE776EB1DBA939D0065A85B /* BoardView.swift */,
+				FAE776ED1DBA93AE0065A85B /* FieldView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +179,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE776E81DBA93620065A85B /* Player.swift in Sources */,
+				FAE776EA1DBA937B0065A85B /* Status.swift in Sources */,
 				FAE776D31DBA91730065A85B /* ViewController.swift in Sources */,
+				FAE776EC1DBA939D0065A85B /* BoardView.swift in Sources */,
 				FAE776D11DBA91730065A85B /* AppDelegate.swift in Sources */,
+				FAE776E61DBA93570065A85B /* Board.swift in Sources */,
+				FAE776EE1DBA93AE0065A85B /* FieldView.swift in Sources */,
+				FAE776F01DBA9EBA0065A85B /* TicTacToeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
