@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TicTacToeViewController: UIViewController {
+class TicTacToeViewController: UIViewController, fieldViewDelegate {
     
     var boardView: BoardView! = nil
     var board : Board = Board()
@@ -22,6 +22,11 @@ class TicTacToeViewController: UIViewController {
         boardView.center = view.center
         print("x: \(boardView.frame.origin.x) and y: \(boardView.frame.origin.y)")
         
+        for arrays in boardView.fieldViews{
+            for element in arrays{
+                element.delegate = self
+            }
+        }
         view.addSubview(boardView)
 
         updateUI()
@@ -31,6 +36,13 @@ class TicTacToeViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func cellTappedAt(x: Int, y: Int){
+        print("never will get called")
+        board.updateCellAtPosition(x: x, y: y)
+//        boardView.updateViewAt(x:x, y:y)
+        updateUI()
     }
     
     

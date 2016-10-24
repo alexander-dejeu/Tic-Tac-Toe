@@ -24,5 +24,28 @@ struct Board {
         }
     }
     
+    mutating func updateCellAtPosition(x: Int, y: Int) {
+        switch boardValues[y][x]{
+        case .empty:
+            boardValues[y][x] = .hasPlayer(currentTurn)
+            updateCurrentTurn()
+            
+        default:
+            print("already a value set at \(x), \(y)")
+            
+        }
+    }
+    
+    
+    
+    mutating func updateCurrentTurn(){
+        if currentTurn == .O{
+            currentTurn = .X
+        }
+        else{
+            currentTurn = .O
+        }
+    }
+    
     
 }

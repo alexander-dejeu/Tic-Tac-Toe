@@ -8,12 +8,18 @@
 
 import UIKit
 
+protocol fieldViewDelegate {
+    func cellTappedAt(x: Int, y:Int) -> ()
+}
+
 class FieldView: UIView {
 
     var xCord: Int
     var yCord: Int
     
     var textlabel : UILabel!
+    
+    var delegate : fieldViewDelegate?
     
     
     init(frame: CGRect, xCord: Int, yCord: Int) {
@@ -32,6 +38,7 @@ class FieldView: UIView {
     
     func handleTap(recognizer: UITapGestureRecognizer){
         print("tapped on: x = \(xCord), y = \(yCord)")
+        delegate?.cellTappedAt(x: xCord, y: yCord)
         //Have to tell the view controller to update the model!
     }
     
