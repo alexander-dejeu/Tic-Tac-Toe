@@ -9,10 +9,22 @@
 import UIKit
 
 class TicTacToeViewController: UIViewController {
+    
+    var boardView: BoardView! = nil
+    var board : Board = Board()
+    
+    @IBOutlet weak var currentPlayerLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        boardView = BoardView(boardHeight: 300, boardWidth: 300)
+        boardView.center = view.center
+        print("x: \(boardView.frame.origin.x) and y: \(boardView.frame.origin.y)")
+        
+        view.addSubview(boardView)
 
+        updateUI()
         // Do any additional setup after loading the view.
     }
 
@@ -21,6 +33,15 @@ class TicTacToeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func updateUI(){
+        if board.winner != nil{
+            currentPlayerLabel.text = "The winner is..."
+        }
+        else{
+            currentPlayerLabel.text = board.getCurrentPlayer()
+        }
+    }
 
     /*
     // MARK: - Navigation

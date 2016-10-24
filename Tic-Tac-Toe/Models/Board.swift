@@ -9,5 +9,20 @@
 import Foundation
 
 struct Board {
+    var winner : Player? = nil
+    var currentTurn: Player = .X
+    var boardValues: [[Status]] = [[.empty, .empty, .empty],
+                                   [.empty, .empty, .empty],
+                                   [.empty, .empty, .empty]]
+    
+    func getCurrentPlayer() -> String{
+        switch currentTurn {
+        case .O:
+            return "O"
+        case .X:
+            return "X"
+        }
+    }
+    
     
 }
