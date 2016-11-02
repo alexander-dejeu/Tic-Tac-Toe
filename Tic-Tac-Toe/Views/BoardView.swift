@@ -10,7 +10,7 @@ import UIKit
 
 class BoardView: UIView {
 
-    var fieldViews : [[FieldView]] = [[]]
+    var fieldViews : [[FieldView]] = []
     
     init(boardHeight: CGFloat, boardWidth: CGFloat) {
         let gameFrame = CGRect(x: 0, y: 0, width: boardWidth, height: boardHeight)
@@ -35,6 +35,7 @@ class BoardView: UIView {
                 tempArrayFieldViews.append(tempFieldView)
                 self.addSubview(tempFieldView)
             }
+            
             fieldViews.append(tempArrayFieldViews)
         }
         
@@ -43,6 +44,7 @@ class BoardView: UIView {
     }
     
     func updateViewAt(player: Player, x:Int, y:Int){
+        print(fieldViews)
         var fieldToUpdate = fieldViews[y][x]
         switch  player {
         case .X:
@@ -50,6 +52,15 @@ class BoardView: UIView {
         case .O:
             fieldToUpdate.textlabel.text = "O"
             
+        }
+    }
+    
+    
+    func resetView(){
+        for row in 0..<fieldViews.count{
+            for item in fieldViews[row]{
+                item.textlabel.text = ""
+            }
         }
     }
 

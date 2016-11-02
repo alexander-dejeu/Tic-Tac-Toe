@@ -39,9 +39,9 @@ class TicTacToeViewController: UIViewController, fieldViewDelegate {
     }
     
     func cellTappedAt(x: Int, y: Int){
-        print("never will get called")
         board.updateCellAtPosition(x: x, y: y)
-//        boardView.updateViewAt(x:x, y:y)
+
+        boardView.updateViewAt(player: board.getLastTurn(), x:x, y:y)
         updateUI()
     }
     
@@ -60,6 +60,8 @@ class TicTacToeViewController: UIViewController, fieldViewDelegate {
         
         //Reset the data model + the view!
         print("reset button tapped")
+        board.resetData()
+        boardView.resetView()
         
     }
     /*
