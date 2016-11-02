@@ -48,13 +48,20 @@ class TicTacToeViewController: UIViewController, fieldViewDelegate {
     
     func updateUI(){
         if board.winner != nil{
-            currentPlayerLabel.text = "The winner is..."
+            //TODO: Bad practice to check nil then unwrap?
+            currentPlayerLabel.text = "The winner is: \(board.winner!.getName())"
         }
         else{
             currentPlayerLabel.text = board.getCurrentPlayer()
         }
     }
 
+    @IBAction func resetButtonTapped(_ sender: AnyObject) {
+        
+        //Reset the data model + the view!
+        print("reset button tapped")
+        
+    }
     /*
     // MARK: - Navigation
 
