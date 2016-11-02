@@ -26,7 +26,7 @@ struct Board {
     
     mutating func updateCellAtPosition(x: Int, y: Int) {
         if(winner != nil){
-            
+            print("there is already a winner - do not update the model")
         }
         else{
             switch boardValues[y][x]{

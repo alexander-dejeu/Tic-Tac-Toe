@@ -39,10 +39,11 @@ class TicTacToeViewController: UIViewController, fieldViewDelegate {
     }
     
     func cellTappedAt(x: Int, y: Int){
-        board.updateCellAtPosition(x: x, y: y)
-
-        boardView.updateViewAt(player: board.getLastTurn(), x:x, y:y)
-        updateUI()
+        if(board.winner == nil){
+            board.updateCellAtPosition(x: x, y: y)
+            boardView.updateViewAt(player: board.getLastTurn(), x:x, y:y)
+            updateUI()
+        }
     }
     
     
@@ -62,6 +63,7 @@ class TicTacToeViewController: UIViewController, fieldViewDelegate {
         print("reset button tapped")
         board.resetData()
         boardView.resetView()
+        updateUI()
         
     }
     /*

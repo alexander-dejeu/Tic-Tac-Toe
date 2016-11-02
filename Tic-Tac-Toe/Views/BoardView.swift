@@ -9,7 +9,7 @@
 import UIKit
 
 class BoardView: UIView {
-
+    
     var fieldViews : [[FieldView]] = []
     
     init(boardHeight: CGFloat, boardWidth: CGFloat) {
@@ -46,12 +46,14 @@ class BoardView: UIView {
     func updateViewAt(player: Player, x:Int, y:Int){
         print(fieldViews)
         var fieldToUpdate = fieldViews[y][x]
-        switch  player {
-        case .X:
-            fieldToUpdate.textlabel.text = "X"
-        case .O:
-            fieldToUpdate.textlabel.text = "O"
-            
+        if fieldToUpdate.textlabel.text == "" {
+            switch  player {
+            case .X:
+                fieldToUpdate.textlabel.text = "X"
+            case .O:
+                fieldToUpdate.textlabel.text = "O"
+                
+            }
         }
     }
     
@@ -63,18 +65,18 @@ class BoardView: UIView {
             }
         }
     }
-
-
+    
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+     // Only override draw() if you perform custom drawing.
+     // An empty implementation adversely affects performance during animation.
+     override func draw(_ rect: CGRect) {
+     // Drawing code
+     }
+     */
+    
 }
