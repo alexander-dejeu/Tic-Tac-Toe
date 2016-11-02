@@ -12,3 +12,18 @@ enum Status {
     case empty
     case hasPlayer(Player)
 }
+
+extension Status: Equatable{
+    static func ==(lhs: Status, rhs: Status) -> Bool {
+        switch (lhs, rhs) {
+        case (.empty, .empty):
+            return true
+            
+        case (let .hasPlayer(player1), let .hasPlayer(player2)):
+            return player1 == player2
+            
+        default:
+            return false
+        }
+    }
+}
