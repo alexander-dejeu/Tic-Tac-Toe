@@ -20,8 +20,8 @@ class TicTacToeViewController: UIViewController, fieldViewDelegate {
         
         boardView = BoardView(boardHeight: 300, boardWidth: 300)
         boardView.center = view.center
-        print("x: \(boardView.frame.origin.x) and y: \(boardView.frame.origin.y)")
         
+        // Set all of the fieldView Delegates
         for arrays in boardView.fieldViews{
             for element in arrays{
                 element.delegate = self

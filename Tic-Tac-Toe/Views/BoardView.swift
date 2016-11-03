@@ -44,7 +44,6 @@ class BoardView: UIView {
     }
     
     func updateViewAt(player: Player, x:Int, y:Int){
-        print(fieldViews)
         var fieldToUpdate = fieldViews[y][x]
         if fieldToUpdate.textlabel.text == "" {
             switch  player {
