@@ -11,7 +11,7 @@ import UIKit
 class BoardView: UIView {
     
     var fieldViews : [[FieldView]] = []
-    
+    //MARK: Lifecycle for the
     init(boardHeight: CGFloat, boardWidth: CGFloat) {
         let gameFrame = CGRect(x: 0, y: 0, width: boardWidth, height: boardHeight)
         super.init(frame: gameFrame)
@@ -43,19 +43,18 @@ class BoardView: UIView {
         
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    //MARK: UI Helpers
     func updateViewAt(player: Player, x:Int, y:Int){
         var fieldToUpdate = fieldViews[y][x]
         if fieldToUpdate.textlabel.text == "" {
-            switch  player {
-            case .X:
-                fieldToUpdate.textlabel.text = "X"
-            case .O:
-                fieldToUpdate.textlabel.text = "O"
-                
-            }
+            fieldToUpdate.textlabel.text = player.rawValue
         }
     }
-    
     
     func resetView(){
         for row in 0..<fieldViews.count{
@@ -64,18 +63,4 @@ class BoardView: UIView {
             }
         }
     }
-    
-    
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    /*
-     // Only override draw() if you perform custom drawing.
-     // An empty implementation adversely affects performance during animation.
-     override func draw(_ rect: CGRect) {
-     // Drawing code
-     }
-     */
-    
 }

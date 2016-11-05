@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FAE776D11DBA91730065A85B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE776D01DBA91730065A85B /* AppDelegate.swift */; };
-		FAE776D31DBA91730065A85B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE776D21DBA91730065A85B /* ViewController.swift */; };
 		FAE776D61DBA91730065A85B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE776D41DBA91730065A85B /* Main.storyboard */; };
 		FAE776D81DBA91730065A85B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAE776D71DBA91730065A85B /* Assets.xcassets */; };
 		FAE776DB1DBA91730065A85B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE776D91DBA91730065A85B /* LaunchScreen.storyboard */; };
@@ -23,7 +22,6 @@
 /* Begin PBXFileReference section */
 		FAE776CD1DBA91730065A85B /* Tic-Tac-Toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic-Tac-Toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE776D01DBA91730065A85B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FAE776D21DBA91730065A85B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FAE776D51DBA91730065A85B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAE776D71DBA91730065A85B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAE776DA1DBA91730065A85B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,7 +68,6 @@
 				FAE776E31DBA934A0065A85B /* ViewControllers */,
 				FAE776E41DBA934A0065A85B /* Views */,
 				FAE776D01DBA91730065A85B /* AppDelegate.swift */,
-				FAE776D21DBA91730065A85B /* ViewController.swift */,
 				FAE776D41DBA91730065A85B /* Main.storyboard */,
 				FAE776D71DBA91730065A85B /* Assets.xcassets */,
 				FAE776D91DBA91730065A85B /* LaunchScreen.storyboard */,
@@ -181,7 +178,6 @@
 			files = (
 				FAE776E81DBA93620065A85B /* Player.swift in Sources */,
 				FAE776EA1DBA937B0065A85B /* Status.swift in Sources */,
-				FAE776D31DBA91730065A85B /* ViewController.swift in Sources */,
 				FAE776EC1DBA939D0065A85B /* BoardView.swift in Sources */,
 				FAE776D11DBA91730065A85B /* AppDelegate.swift in Sources */,
 				FAE776E61DBA93570065A85B /* Board.swift in Sources */,
@@ -348,6 +344,7 @@
 				FAE776E11DBA91730065A85B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

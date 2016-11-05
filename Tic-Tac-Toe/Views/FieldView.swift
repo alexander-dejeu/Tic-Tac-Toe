@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol fieldViewDelegate {
+protocol FieldViewDelegate {
     func cellTappedAt(x: Int, y:Int) -> ()
 }
 
@@ -19,7 +19,7 @@ class FieldView: UIView {
     
     var textlabel : UILabel!
     
-    var delegate : fieldViewDelegate?
+    var delegate : FieldViewDelegate?
     
     
     init(frame: CGRect, xCord: Int, yCord: Int) {

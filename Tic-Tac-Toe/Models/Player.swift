@@ -8,16 +8,7 @@
 
 import Foundation
 
-enum Player {
-    case X
-    case O
-    
-    func getName() -> String {
-        switch self{
-        case .X:
-            return "X"
-        case .O:
-            return "O"
-        }
-    }
+enum Player: String {
+    case x = "X"
+    case o = "O"
 }
